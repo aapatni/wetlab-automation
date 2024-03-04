@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-darkest: #111827;
+    --primary-darker: #1f2937;
+    --primary-dark: #374151;
+    --primary-base: #4b5563;
+    --primary-light: #6b7280;
+    --primary-lighter: #9ca3af;
+    --primary-lightest: #d1d5db;
+
+    --secondary-darkest: #394453;
+    --secondary-darker: #475569;
+    --secondary-dark: #516278;
+    --secondary-base: #667a91;
+    --secondary-light: #b0bbc9;
+    --secondary-lighter: #eceff2;
+    --secondary-lightest: #f6f7f9;
+
+    --danger-darkest: #991b1b;
+    --danger-darker: #b91c1c;
+    --danger-dark: #dc2626;
+    --danger-base: #ef4444;
+    --danger-light: #fca5a5;
+    --danger-lighter: #fee2e2;
+    --danger-lightest: #fef2f2;
+
+    --background: #ffffff;
+    --foreground: #1f2937;
+
+    --base: #ffffff;
+    --base-foreground: #1f2937;
+    --base-stroke: #1f2937;
+
+    --soft: #f3f4f6;
+    --soft-foreground: #9ca3af;
+    --soft-stroke: #7497ff;
+
+    --weak: #cfdeff;
+    --weak-foreground: #7497ff;
+    --weak-stroke: #a8c1ff;
+
+    --sub: #cfdeff;
+    --sub-foreground: #0005ff;
+    --sub-stroke: #3e59ff;
+
+    --surface: #454545;
+
+    --inverse: #ffffff;
+    --inverse-foreground: #f6f6f6;
+    --inverse-stroke: #f6f6f6;
+
+    --radius-none: 0px;
+    --radius-xs: 6px;
+    --radius-sm: 8px;
+    --radius-base: 10px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-full: 999px;
+
+    --primary-foreground: #000000;
+    --secondary-foreground: #ffffff;
+    --danger-foreground: #ffffff;
+
+    --state-success: #10b985;
+    --state-foreground: #e4eeff;
+    --state-warning: #eaa108;
+    --state-error: #ef4444;
+    --state-information: #06acd4;
+    --state-away: #eaa108;
+    --state-feature: #aa55f7;
+    --state-neutral: #5d6c7d;
+    --state-verified: #3b76f6;
+
+    --shadow-low: 0px 1px 1px 0px rgba(0, 0, 0, 0.07),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.1),
+      0px 0px 8px 0px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0px 1px 1px 0px rgba(0, 0, 0, 0.05),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.05), 0px 5px 5px 0px rgba(0, 0, 0, 0.05),
+      0px 10px 10px 0px rgba(0, 0, 0, 0.05), 0px 0px 8px 0px rgba(0, 0, 0, 0.05);
+    --shadow-high: 0px 2px 4px 0px rgba(0, 0, 0, 0.03),
+      0px 6px 6px 0px rgba(0, 0, 0, 0.03), 0px 15px 20px 0px rgba(0, 0, 0, 0.03),
+      0px 30px 40px 0px rgba(0, 0, 0, 0.03),
+      0px 40px 70px 0px rgba(0, 0, 0, 0.03),
+      0px 4px 30px 0px rgba(0, 0, 0, 0.03), 0px 0px 8px 0px rgba(0, 0, 0, 0.03);
+    --background-1000: #020030;
+    --background-900: #0200b0;
+    --background-800: #0005e4;
+    --background-700: #0005ff;
+    --background-600: #0005ff;
+    --background-500: #131eff;
+    --background-400: #3e59ff;
+    --background-300: #7497ff;
+    --background-200: #a8c1ff;
+    --background-100: #cfdeff;
+    --background-0: #e4eeff;
+  }
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .primary-focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 4px var(--primary-lighter),
+      0px 0px 0px 2px var(--background);
+  }
+  .secondary-focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 4px var(--secondary-lighter),
+      0px 0px 0px 2px var(--background);
+  }
+  .danger-focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 4px var(--danger-lighter),
+      0px 0px 0px 2px var(--background);
+  }
+}

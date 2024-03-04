@@ -17,8 +17,19 @@ load_dotenv()
 SCOPE_IP = os.getenv("SCOPE_IP")
 SCOPE_PORT = os.getenv("SCOPE_PORT")
 microscope_base_url = f"http://{SCOPE_IP}:{SCOPE_PORT}"
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Todo: Only allow frontend origin
+# Add CORS middleware to allow requests from your frontend domain
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # List of allowed origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 
 class ErrorResponse(BaseModel):
@@ -58,6 +69,9 @@ async def get_image():
         response_json = image_response.json()
         # Extract the base64 encoded image
         base64_image = response_json["data"]["base64"]
+        
+        # Todo: Run Rob's cell counting algorithm
+        # Todo: Save to db
 
         return {"image": base64_image}
     else:
